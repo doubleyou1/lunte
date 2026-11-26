@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lunte – Beamer</title>
+  <link rel="stylesheet" href="/css/beamer.css">
+</head>
+<body>
+  <main id="lobby-view" class="lobby">
+    <section class="join">
+      <h1>Lunte<span class="spark" aria-hidden="true"></span></h1>
+      <div class="qr-frame">
+        <img id="qr" alt="QR-Code zum Beitreten" hidden>
+        <p id="no-network" hidden>Kein Netzwerk gefunden. Verbinde den Laptop mit dem WLAN oder starte den Hotspot.</p>
+      </div>
+      <p class="hint">Scannen, Namen eingeben, mitspielen</p>
+      <p id="join-url" class="url"></p>
+    </section>
+
+    <section class="roster" aria-label="Spieler">
+      <header>
+        <h2>Spieler</h2>
+        <p id="player-count" class="count"></p>
+      </header>
+      <ol id="slots" class="slots"></ol>
+      <button id="start-button" class="primary" type="button" disabled>Runde starten</button>
+    </section>
+  </main>
+
+  <main id="game-view" class="game" hidden>
+    <aside id="hud-left" class="hud">
+      <div class="clock">
+        <span id="clock-label">Bis die Arena schrumpft</span>
+        <strong id="clock-value">2:00</strong>
+      </div>
+    </aside>
+    <div class="arena-wrap">
+      <canvas id="arena"></canvas>
+      <div id="countdown" class="countdown" hidden></div>
+      <section id="scoreboard" class="scoreboard" hidden>
+        <h2 id="result-title"></h2>
+        <table>
+          <thead><tr><th scope="col">Spieler</th><th scope="col">Siege</th><th scope="col">Treffer</th></tr></thead>
+          <tbody id="score-rows"></tbody>
+        </table>
+        <div class="score-actions">
+          <button id="next-button" class="primary" type="button">Nächste Runde</button>
+          <button id="lobby-button" type="button">Zur Lobby</button>
+        </div>
+      </section>
+    </div>
+    <aside id="hud-right" class="hud"></aside>
+  </main>
+
+  <p id="server-lost" class="server-lost" hidden>Verbindung zum Server verloren …</p>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/figure.js"></script>
+  <script src="/js/beamer.js"></script>
+</body>
+</html>

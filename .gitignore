@@ -1,0 +1,5 @@
+node_modules/
+
+# nur lokal, nicht veröffentlichen
+SPIELABEND-NOTIZEN.md
+claude-code-prompt-bomberman.md
