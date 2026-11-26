@@ -2,6 +2,7 @@
   "name": "lunte",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "description": "Lokales Mehrspieler-Arcade-Spiel: Laptop am Beamer, Handys als Gamepads, komplett offline.",
   "main": "server/index.js",
   "scripts": {

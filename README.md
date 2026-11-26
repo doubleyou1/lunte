@@ -110,3 +110,7 @@ die Dev-Abhängigkeiten, also ein normales `npm install`.
 - QR-Code öffnet nichts: gleiches WLAN? Firewall? Adresse unter dem QR-Code prüfen.
 - Handy fliegt raus: Seite neu laden, die Figur kommt zurück.
 - Spieler weg, Platz belegt: Der Platz wird nach 60 Sekunden außerhalb einer Runde frei.
+
+## Entstehung und Lizenz
+
+Das Spiel wurde mit Claude Code erstellt. Es steht unter der MIT-Lizenz, siehe `LICENSE`.
